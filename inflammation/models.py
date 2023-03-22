@@ -46,3 +46,20 @@ def daily_min(data):
     :returns : An array of minimum values of measurements for each day.
     """
     return np.min(data, axis=0)
+
+
+def daily_std(data):
+    """Calculate the daily min of a 2D inflammation data array.
+
+    :param data: A 2D data array with inflammation data 
+     (each row contains measurements for a single patient across all days).
+    :returns : An array of standard deviation values of measurements for each day.
+    """
+    return np.std(data, axis=0)
+
+
+#def patient_normalise(data):
+#    """Normalise patient data from a 2D inflammation data array."""
+#    max = np.max(data, axis=0)
+#    return data / max[:, np.newaxis]
+
